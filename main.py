@@ -8,4 +8,10 @@ def draw(filename, x, y):
 	file.write(s)
 
 	r = c = 0
-	
+	while r < y:
+		while c < x:
+			R = 0
+			G = 255
+			B = 0
+
+			
