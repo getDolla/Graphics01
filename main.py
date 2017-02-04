@@ -6,7 +6,7 @@ def draw(filename, x, y):
         c = 0
         while c < x:
             R = (c + r)%255
-	    G = 255
+	    G = 255 - (r/2)%255
 	    B = (r/2) % 255
 
             s += str(R) + " " + str(G) + " " + str(B) + " \n"
