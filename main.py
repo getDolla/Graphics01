@@ -14,8 +14,6 @@ def draw(filename, x, y):
         r += 1
 
     with open(filename+".ppm", "w") as f:
-        f.write(s) #write to ppm file
+        f.write(s) #writes to .ppm file
 
 draw("pic", 500, 500)
-
-			
