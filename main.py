@@ -1,17 +1,21 @@
 def draw(filename, x, y):
-	'''
-	Makes file if it doesn't exist and writes headers
-	'''
+    s = "P3\n" + str(x) + " " + str(y) + " 255\n" #header
 
-	file = open(filename, "w")
-	s = "P3\n" + str(x) + " " + str(y) + " 255\n"
-	file.write(s)
+    r = 0
+    while r < y:
+        c = 0
+        while c < x:
+            R = 0
+	    G = 255
+	    B = 0
 
-	r = c = 0
-	while r < y:
-		while c < x:
-			R = 0
-			G = 255
-			B = 0
+            s += str(R) + " " + str(G) + " " + str(B) + " \n"
+            c += 1
+        r += 1
+
+    with open(filename+".ppm", "w") as f:
+        f.write(s)
+
+draw("pic", 500, 500)
 
 			
